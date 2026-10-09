@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirror my iPhone: Free iPhone Mirroring Alternative for Mac</title>
+<meta name="description" content="Mirror and control your iPhone from your Mac over USB at 60 FPS. Works in the EU and on macOS 13+. Free, open source, with an MCP server and API for AI agents.">
+<link rel="canonical" href="https://bhuwanadhikari.com.np/mirror-my-iphone/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Bhuwan Adhikari">
+<meta name="theme-color" content="#2f63ee">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mirror my iPhone">
+<meta property="og:title" content="Mirror my iPhone: Free iPhone Mirroring Alternative for Mac">
+<meta property="og:description" content="Mirror and control your iPhone from your Mac over USB at 60 FPS. Works in the EU and on macOS 13+. Free, open source, and built for AI agents.">
+<meta property="og:url" content="https://bhuwanadhikari.com.np/mirror-my-iphone/">
+<meta property="og:image" content="https://bhuwanadhikari.com.np/mirror-my-iphone/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mirror my iPhone: the iPhone Mirroring alternative for Mac">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://bhuwanadhikari.com.np/mirror-my-iphone/#app",
+      "name": "Mirror my iPhone",
+      "alternateName": "mirror-my-iphone",
+      "description": "Free, open-source macOS app that mirrors an iPhone's screen to a Mac over USB at up to 60 FPS and lets you control it with the mouse and trackpad. Works in the EU, where Apple's iPhone Mirroring is unavailable, and on macOS 13 Ventura or later. Includes an MCP server, a CLI and a local HTTP API so AI agents such as Claude can see and control the iPhone directly, without computer use.",
+      "url": "https://bhuwanadhikari.com.np/mirror-my-iphone/",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "Screen mirroring",
+      "operatingSystem": "macOS 13 Ventura or later",
+      "softwareVersion": "0.2.1",
+      "downloadUrl": "https://github.com/bhuwanadhikari/mirror-my-iphone/releases/latest",
+      "installUrl": "https://github.com/bhuwanadhikari/mirror-my-iphone#install",
+      "releaseNotes": "https://github.com/bhuwanadhikari/mirror-my-iphone/releases",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true,
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+      "image": "https://bhuwanadhikari.com.np/mirror-my-iphone/assets/icon-512.png",
+      "screenshot": "https://bhuwanadhikari.com.np/mirror-my-iphone/assets/screenshot.jpg",
+      "featureList": [
+        "Mirror an iPhone on a Mac over USB at up to 60 FPS",
+        "Control the iPhone with mouse and trackpad: tap, swipe, scroll, long press",
+        "Home, Lock and volume buttons; iPhone audio on the Mac",
+        "Works in the European Union, where Apple's iPhone Mirroring is unavailable",
+        "Works on macOS 13 Ventura and macOS 14 Sonoma, Apple silicon and Intel",
+        "MCP server for Claude Code, Claude Desktop, Cursor and other MCP clients",
+        "CLI and local HTTP API for scripts and AI agents, no computer use needed",
+        "Built-in Doctor that checks and fixes the setup"
+      ],
+      "keywords": "iPhone Mirroring alternative, iPhone Mirroring EU, mirror iPhone to Mac, control iPhone from Mac, iPhone screen mirroring USB, iPhone MCP server, AI agent iPhone control",
+      "author": {"@id": "https://bhuwanadhikari.com.np/#person"},
+      "sameAs": ["https://github.com/bhuwanadhikari/mirror-my-iphone"]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "mirror-my-iphone",
+      "codeRepository": "https://github.com/bhuwanadhikari/mirror-my-iphone",
+      "programmingLanguage": "Python",
+      "license": "https://opensource.org/licenses/MIT",
+      "targetProduct": {"@id": "https://bhuwanadhikari.com.np/mirror-my-iphone/#app"},
+      "author": {"@id": "https://bhuwanadhikari.com.np/#person"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://bhuwanadhikari.com.np/#person",
+      "name": "Bhuwan Adhikari",
+      "url": "https://bhuwanadhikari.com.np/",
+      "sameAs": ["https://github.com/bhuwanadhikari"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bhuwanadhikari.com.np/mirror-my-iphone/#website",
+      "url": "https://bhuwanadhikari.com.np/mirror-my-iphone/",
+      "name": "Mirror my iPhone",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Mirror my iPhone demo",
+      "description": "An iPhone next to its live mirror on a Mac: the mirrored screen follows every tap at 60 FPS over USB.",
+      "thumbnailUrl": "https://bhuwanadhikari.com.np/mirror-my-iphone/assets/demo-poster.jpg",
+      "contentUrl": "https://bhuwanadhikari.com.np/mirror-my-iphone/assets/demo.mp4",
+      "uploadDate": "2026-10-02",
+      "duration": "PT39S"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is there a free alternative to Apple's iPhone Mirroring?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Mirror my iPhone is a free, open-source Mac app that mirrors your iPhone over USB at up to 60 FPS and lets you control it with your mouse and trackpad. Unlike Apple's iPhone Mirroring, it works in the EU, runs on macOS 13 Ventura or later, and has an API for AI agents."}},
+        {"@type": "Question", "name": "Why does my Mac say \"iPhone Mirroring is not available in your country or region\"?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Apple has switched iPhone Mirroring off in the European Union, citing the Digital Markets Act (DMA). Apple's support page says \"iPhone Mirroring is currently unavailable in the European Union.\" Mirror my iPhone doesn't depend on Apple's feature, so it works there."}},
+        {"@type": "Question", "name": "Does Mirror my iPhone work in Germany, France and the rest of the EU?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. It reads the iPhone's screen over USB, like QuickTime Player does, and taps through Apple's developer tools, so it works in every EU country and everywhere else."}},
+        {"@type": "Question", "name": "Can I mirror my iPhone on macOS Ventura or Sonoma?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Apple's iPhone Mirroring needs macOS 15 Sequoia and iOS 18, but Mirror my iPhone runs on macOS 13 Ventura and later, on Apple silicon and Intel Macs."}},
+        {"@type": "Question", "name": "Can I mirror my iPhone to my Mac with a USB cable?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Mirror my iPhone uses a USB data cable. QuickTime Player can also show an iPhone over USB, but only Mirror my iPhone lets you control it with your mouse."}},
+        {"@type": "Question", "name": "Can I control my iPhone from my Mac with a mouse or trackpad?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Click to tap, drag to swipe, scroll with the trackpad, and click and hold for a long press. Home, Lock and volume are in the toolbar and on keyboard shortcuts."}},
+        {"@type": "Question", "name": "Does it work wirelessly?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. Mirror my iPhone needs a USB cable that carries data."}},
+        {"@type": "Question", "name": "Do I need a paid Apple Developer account or a jailbreak?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. Mirroring needs neither. Touch control works with a free Apple ID in Xcode and Developer Mode on the iPhone."}},
+        {"@type": "Question", "name": "Can AI agents like Claude control my iPhone?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Mirror my iPhone includes an MCP server for Claude Code, Claude Desktop, Cursor, VS Code, Codex CLI, Gemini CLI and other MCP clients, plus a CLI and a local HTTP API. Agents take screenshots, list the elements on screen, and tap, swipe, type, press buttons and open apps."}},
+        {"@type": "Question", "name": "Do AI agents need computer use to control the iPhone?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. Agents call tools that act on the iPhone directly. They don't screenshot your Mac or move your mouse, they get exact tap targets from iOS accessibility, and you can keep using your Mac while they work."}},
+        {"@type": "Question", "name": "Is Mirror my iPhone safe and private?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Everything stays on your Mac and the USB cable. There is no account and no telemetry, and the source code is open (MIT license). The agent API only listens on 127.0.0.1, needs a token only your user account can read, and refuses requests from web pages."}},
+        {"@type": "Question", "name": "Does Mirror my iPhone work on Windows?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. It is a Mac app and needs macOS 13 or later."}},
+        {"@type": "Question", "name": "Can I type on the iPhone with my Mac keyboard?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Not yet. AI agents and scripts can type text into the focused field through the API, but typing on your Mac keyboard isn't supported yet."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/favicon-32.png" srcset="assets/apple-touch-icon.png 2x" width="32" height="32" alt="">Mirror my iPhone</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#agents">AI agents</a>
+      <a href="#eu">EU</a>
+      <a href="#compare">Compare</a>
+      <a href="#faq">FAQ</a>
+      <a class="gh" href="https://github.com/bhuwanadhikari/mirror-my-iphone">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Free and open source for macOS</p>
+      <h1>The free <span class="hl">iPhone Mirroring</span> alternative for Mac</h1>
+      <p class="lead">Mirror my iPhone shows your iPhone on your Mac at 60 FPS over a USB cable, and you control it with your mouse and trackpad. It works where Apple's iPhone Mirroring doesn't: in the EU and on macOS 13 and 14. And it gives AI agents like Claude a direct API to your phone, so they don't need computer use.</p>
+      <ul class="chips" aria-label="Highlights">
+        <li>Works in the EU</li>
+        <li>macOS 13 Ventura or later</li>
+        <li>60 FPS over USB</li>
+        <li>MCP server and HTTP API</li>
+        <li>MIT licensed</li>
+      </ul>
+      <div class="buttons">
+        <a class="btn primary" href="#install">Install for Mac</a>
+        <a class="btn" href="https://github.com/bhuwanadhikari/mirror-my-iphone">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+    <picture>
+      <source type="image/webp" srcset="assets/screenshot-746.webp 746w, assets/screenshot.webp 1492w" sizes="(max-width: 900px) 520px, 460px">
+      <img class="shot" src="assets/screenshot.jpg" width="746" height="865" fetchpriority="high"
+           alt="Mirror my iPhone on a Mac: an iPhone 15 home screen mirrored at 59 FPS over USB, next to the Doctor sidebar reporting that mirroring and touch control are ready">
+    </picture>
+  </div>
+</section>
+
+<section class="soft" id="what">
+  <div class="wrap">
+    <h2>What is Mirror my iPhone?</h2>
+    <p class="lead">Mirror my iPhone is a free, open-source Mac app that mirrors an iPhone's screen to a Mac over USB at up to 60 FPS and lets you control the iPhone with your mouse, trackpad and keyboard shortcuts. It is an alternative to Apple's iPhone Mirroring that works in the European Union and on older versions of macOS. AI agents can use the same iPhone through its MCP server, command-line tool and local HTTP API.</p>
+    <dl class="facts">
+      <div><dt>Price</dt><dd>Free, open source (MIT)</dd></div>
+      <div><dt>Mac</dt><dd>macOS 13 Ventura or later, Apple silicon or Intel</dd></div>
+      <div><dt>iPhone</dt><dd>Any iPhone QuickTime Player can show over USB (tested on iPhone 15, iOS 26)</dd></div>
+      <div><dt>Connection</dt><dd>USB data cable</dd></div>
+      <div><dt>Regions</dt><dd>Every country, including the EU</dd></div>
+      <div><dt>For AI agents</dt><dd>MCP server, CLI and HTTP API</dd></div>
+      <div><dt>Install</dt><dd>Homebrew cask or build from source</dd></div>
+      <div><dt>Latest version</dt><dd><a href="https://github.com/bhuwanadhikari/mirror-my-iphone/releases/latest">0.2.1</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap">
+    <div class="center">
+      <h2>See it in action</h2>
+      <p class="lead">An iPhone next to its live mirror on a Mac. The mirrored screen follows every touch.</p>
+    </div>
+    <div class="demo">
+      <video autoplay muted loop playsinline preload="metadata" width="1280" height="720" poster="assets/demo-poster.jpg"
+             aria-label="Demo: an iPhone in a hand next to its live mirror in the Mirror my iPhone window on a MacBook">
+        <source src="assets/demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="features">
+  <div class="wrap">
+    <h2>Everything you need to use your iPhone from your Mac</h2>
+    <div class="grid">
+      <div class="card"><div class="tile t-red"></div><h3>Smooth 60 FPS</h3><p>The same USB video stream QuickTime Player records, so scrolling, animations and videos look natural.</p></div>
+      <div class="card"><div class="tile t-yellow"></div><h3>Full mouse and trackpad control</h3><p>Click to tap, drag to swipe, scroll with two fingers, and click and hold for a long press.</p></div>
+      <div class="card"><div class="tile t-green"></div><h3>Buttons and sound</h3><p>Home, Lock and volume from the toolbar or the keyboard (<kbd>⇧⌘H</kbd>, <kbd>⌘L</kbd>). iPhone audio plays on your Mac.</p></div>
+      <div class="card"><div class="tile t-cyan"></div><h3>Built for AI agents</h3><p>Claude and other agents see the screen, read its buttons and fields, and tap, swipe, type and open apps through an MCP server, CLI or HTTP API.</p></div>
+      <div class="card"><div class="tile t-purple"></div><h3>Guided setup</h3><p>The built-in Doctor checks your iPhone and Mac and shows how to fix anything missing, often with one click.</p></div>
+      <div class="card"><div class="tile t-orange"></div><h3>Private and free</h3><p>Everything stays on your Mac and the USB cable. No account, no telemetry, MIT licensed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="agents">
+  <div class="wrap">
+    <p class="eyebrow">For AI agents</p>
+    <h2>Give your AI agent an iPhone, with no computer use required</h2>
+    <p class="lead">Mirror my iPhone exposes the iPhone itself to agents. Claude, Cursor, Codex or your own script call tools like <code>tap</code> and <code>describe_ui</code>, and the iPhone does it. The agent never has to look at your Mac's screen or move your mouse.</p>
+    <div class="vs">
+      <div>
+        <h3>Computer use <span class="tag slow">Indirect</span></h3>
+        <ul>
+          <li>The agent screenshots your whole Mac and looks for the mirroring window</li>
+          <li>It guesses where buttons are from pixels</li>
+          <li>It takes over your mouse and keyboard while it works</li>
+          <li>Apple's iPhone Mirroring offers no other way: it has no API</li>
+        </ul>
+      </div>
+      <div class="yes">
+        <h3>Mirror my iPhone API <span class="tag fast">Direct</span></h3>
+        <ul>
+          <li>Phone-sized screenshots of just the iPhone</li>
+          <li>Exact tap targets for every button, field and cell, from iOS accessibility</li>
+          <li>Each gesture returns once the iPhone has done it, with a screenshot of the result</li>
+          <li>Your Mac stays yours: keep working while the agent uses the phone</li>
+        </ul>
+      </div>
+    </div>
+    <p class="code-label">Add it to Claude Code (the app must be open):</p>
+    <div class="code"><pre><code><span class="p">$ </span>claude mcp add --scope user mirror-my-iphone -- "/Applications/Mirror my iPhone.app/Contents/Resources/bin/mirror-my-iphone" mcp</code></pre></div>
+    <p>Then ask <em>"Open Settings on my iPhone and turn on Dark Mode."</em> You watch every agent touch on the mirror as a blue dot. Claude Desktop, Cursor, VS Code and other MCP clients use the same command, and anything else can use the CLI or the HTTP API on <code>127.0.0.1</code>.</p>
+    <ul class="tools" aria-label="Agent tools">
+      <li><code>screenshot</code></li><li><code>describe_ui</code></li><li><code>tap</code></li><li><code>double_tap</code></li>
+      <li><code>long_press</code></li><li><code>swipe</code></li><li><code>type_text</code></li><li><code>press_button</code></li>
+      <li><code>open_app</code></li><li><code>list_apps</code></li><li><code>device_info</code></li>
+    </ul>
+    <div class="buttons"><a class="btn primary" href="iphone-mcp-server/">Agent setup and API reference</a></div>
+  </div>
+</section>
+
+<section id="eu">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">In the EU</p>
+      <h2>“iPhone Mirroring is not available in your country or region”?</h2>
+      <p>That's what Apple's iPhone Mirroring shows across the European Union, where Apple has switched it off, citing the Digital Markets Act (DMA). Apple's own support page says it plainly: <q>iPhone Mirroring is currently unavailable in the European Union.</q></p>
+      <p>Mirror my iPhone doesn't use Apple's feature. It reads the screen over USB like QuickTime Player does and taps through Apple's own developer tools, so it works in Germany, France, Italy, Spain, the Netherlands, Poland, Sweden and every other country.</p>
+      <p><a href="iphone-mirroring-not-available-in-your-country-or-region/">Why iPhone Mirroring is blocked in the EU, and what works instead →</a></p>
+    </div>
+    <img class="dialog-img" src="assets/iphone-mirroring-not-available-in-your-country-or-region.png" width="299" height="260" loading="lazy"
+         alt="macOS dialog: Unable to Connect to iPhone. iPhone Mirroring is not available in your country or region.">
+  </div>
+</section>
+
+<section class="soft" id="compare">
+  <div class="wrap">
+    <h2>Mirror my iPhone vs Apple iPhone Mirroring</h2>
+    <p class="lead">Apple's feature is wireless and built in. Mirror my iPhone needs a cable but works in more places and can be used by agents.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col" class="ours">Mirror my iPhone</th><th scope="col">Apple iPhone Mirroring</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Works in the EU</th><td class="ours"><span class="y">Yes</span></td><td><span class="n">No</span></td></tr>
+          <tr><th scope="row">Mac</th><td class="ours">macOS 13 Ventura or later, Apple silicon or Intel</td><td>macOS 15 Sequoia or later, Apple silicon or T2 chip</td></tr>
+          <tr><th scope="row">iPhone</th><td class="ours">Any iPhone QuickTime Player can show over USB</td><td>iOS 18 or later</td></tr>
+          <tr><th scope="row">Connection</th><td class="ours">USB cable</td><td>Wireless (Wi-Fi, Bluetooth, same Apple Account)</td></tr>
+          <tr><th scope="row">Control with mouse and trackpad</th><td class="ours"><span class="y">Yes</span></td><td><span class="y">Yes</span></td></tr>
+          <tr><th scope="row">Use the iPhone in your hand at the same time</th><td class="ours"><span class="y">Yes</span></td><td><span class="n">No, it stays locked</span></td></tr>
+          <tr><th scope="row">API for AI agents</th><td class="ours"><span class="y">MCP server, CLI, HTTP</span></td><td><span class="n">None</span></td></tr>
+          <tr><th scope="row">Type with your Mac keyboard</th><td class="ours"><span class="n">Not yet</span></td><td><span class="y">Yes</span></td></tr>
+          <tr><th scope="row">iPhone notifications on the Mac</th><td class="ours"><span class="n">No</span></td><td><span class="y">Yes</span></td></tr>
+          <tr><th scope="row">Price</th><td class="ours">Free, open source</td><td>Built into macOS</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><a href="iphone-mirroring-alternatives/">Compare all iPhone Mirroring alternatives, including QuickTime Player and AirPlay apps →</a></p>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap narrow">
+    <h2>Install Mirror my iPhone</h2>
+    <p class="muted">You need a Mac with macOS 13 or later, an iPhone and a USB cable that carries data. Touch control also needs Xcode, which is free.</p>
+    <ol class="steps">
+      <li>
+        <h3>Install with Homebrew</h3>
+        <div class="code"><pre><code><span class="p">$ </span>brew tap bhuwanadhikari/mirror-my-iphone https://github.com/bhuwanadhikari/mirror-my-iphone
+<span class="p">$ </span>brew trust bhuwanadhikari/mirror-my-iphone
+<span class="p">$ </span>brew install --cask mirror-my-iphone</code></pre></div>
+        <p>Or <a href="https://github.com/bhuwanadhikari/mirror-my-iphone#install">build it from source</a>.</p>
+      </li>
+      <li>
+        <h3>Plug in your iPhone and tap Trust</h3>
+        <p>Open Mirror my iPhone and allow camera access when macOS asks. That's how the iPhone's screen reaches your Mac. The first launch takes about a minute to set itself up.</p>
+      </li>
+      <li>
+        <h3>Let the Doctor finish the setup</h3>
+        <p>Mirroring works right away. For touch control, the Doctor walks you through Xcode, a free Apple ID and Developer Mode on the iPhone, then builds and installs WebDriverAgent for you.</p>
+      </li>
+      <li>
+        <h3>Optional: connect your AI agent</h3>
+        <p>Add the MCP server to Claude Code, Claude Desktop, Cursor or another client. See <a href="iphone-mcp-server/">the agent setup guide</a>.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="soft" id="faq">
+  <div class="wrap narrow">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <h3>Is there a free alternative to Apple's iPhone Mirroring?</h3>
+      <p>Yes. Mirror my iPhone is a free, open-source Mac app that mirrors your iPhone over USB at up to 60 FPS and lets you control it with your mouse and trackpad. Unlike Apple's iPhone Mirroring, it works in the EU, runs on macOS 13 Ventura or later, and has an API for AI agents.</p>
+
+      <h3>Why does my Mac say "iPhone Mirroring is not available in your country or region"?</h3>
+      <p>Apple has switched iPhone Mirroring off in the European Union, citing the Digital Markets Act (DMA). Apple's support page says "iPhone Mirroring is currently unavailable in the European Union." Mirror my iPhone doesn't depend on Apple's feature, so it works there. <a href="iphone-mirroring-not-available-in-your-country-or-region/">More about the EU block</a>.</p>
+
+      <h3>Does Mirror my iPhone work in Germany, France and the rest of the EU?</h3>
+      <p>Yes. It reads the iPhone's screen over USB, like QuickTime Player does, and taps through Apple's developer tools, so it works in every EU country and everywhere else.</p>
+
+      <h3>Can I mirror my iPhone on macOS Ventura or Sonoma?</h3>
+      <p>Yes. Apple's iPhone Mirroring needs macOS 15 Sequoia and iOS 18, but Mirror my iPhone runs on macOS 13 Ventura and later, on Apple silicon and Intel Macs.</p>
+
+      <h3>Can I mirror my iPhone to my Mac with a USB cable?</h3>
+      <p>Yes. Mirror my iPhone uses a USB data cable. QuickTime Player can also show an iPhone over USB, but only Mirror my iPhone lets you control it with your mouse.</p>
+
+      <h3>Can I control my iPhone from my Mac with a mouse or trackpad?</h3>
+      <p>Yes. Click to tap, drag to swipe, scroll with the trackpad, and click and hold for a long press. Home, Lock and volume are in the toolbar and on keyboard shortcuts.</p>
+
+      <h3>Does it work wirelessly?</h3>
+      <p>No. Mirror my iPhone needs a USB cable that carries data.</p>
+
+      <h3>Do I need a paid Apple Developer account or a jailbreak?</h3>
+      <p>No. Mirroring needs neither. Touch control works with a free Apple ID in Xcode and Developer Mode on the iPhone.</p>
+
+      <h3>Can AI agents like Claude control my iPhone?</h3>
+      <p>Yes. Mirror my iPhone includes an MCP server for Claude Code, Claude Desktop, Cursor, VS Code, Codex CLI, Gemini CLI and other MCP clients, plus a CLI and a local HTTP API. Agents take screenshots, list the elements on screen, and tap, swipe, type, press buttons and open apps. <a href="iphone-mcp-server/">Set up your agent</a>.</p>
+
+      <h3>Do AI agents need computer use to control the iPhone?</h3>
+      <p>No. Agents call tools that act on the iPhone directly. They don't screenshot your Mac or move your mouse, they get exact tap targets from iOS accessibility, and you can keep using your Mac while they work.</p>
+
+      <h3>Is Mirror my iPhone safe and private?</h3>
+      <p>Everything stays on your Mac and the USB cable. There is no account and no telemetry, and the source code is open (MIT license). The agent API only listens on 127.0.0.1, needs a token only your user account can read, and refuses requests from web pages.</p>
+
+      <h3>Does Mirror my iPhone work on Windows?</h3>
+      <p>No. It is a Mac app and needs macOS 13 or later.</p>
+
+      <h3>Can I type on the iPhone with my Mac keyboard?</h3>
+      <p>Not yet. AI agents and scripts can type text into the focused field through the API, but typing on your Mac keyboard isn't supported yet.</p>
+    </div>
+  </div>
+</section>
+
+<section id="guides">
+  <div class="wrap">
+    <h2>Guides</h2>
+    <div class="links">
+      <a href="iphone-mirroring-not-available-in-your-country-or-region/"><div class="card"><h3>iPhone Mirroring not available in your country?</h3><p>Why Apple blocks it in the EU, and how to mirror your iPhone anyway.</p></div></a>
+      <a href="iphone-mcp-server/"><div class="card"><h3>Let AI agents control your iPhone</h3><p>MCP server, CLI and HTTP API for Claude, Cursor, Codex and your own scripts.</p></div></a>
+      <a href="iphone-mirroring-alternatives/"><div class="card"><h3>iPhone Mirroring alternatives compared</h3><p>Apple iPhone Mirroring, Mirror my iPhone, QuickTime Player and AirPlay apps.</p></div></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><strong>Mirror my iPhone</strong><br>Free, open-source iPhone mirroring for Mac.</div>
+      <nav aria-label="Footer">
+        <a href="https://github.com/bhuwanadhikari/mirror-my-iphone">GitHub</a>
+        <a href="https://github.com/bhuwanadhikari/mirror-my-iphone#readme">Documentation</a>
+        <a href="https://github.com/bhuwanadhikari/mirror-my-iphone/releases">Releases</a>
+        <a href="https://github.com/bhuwanadhikari/mirror-my-iphone/issues">Issues</a>
+        <a href="llms.txt">llms.txt</a>
+      </nav>
+    </div>
+    <p class="legal">Made by <a href="https://bhuwanadhikari.com.np/">Bhuwan Adhikari</a>. MIT licensed. Started from <a href="https://github.com/Dennisjoch/iPhoneMirroring">Dennisjoch/iPhoneMirroring</a>. Mirror my iPhone is an independent project, not affiliated with or endorsed by Apple Inc. Apple, iPhone, Mac, macOS, QuickTime and Xcode are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

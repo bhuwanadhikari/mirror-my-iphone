@@ -1,6 +1,8 @@
 # Mirror my iPhone
 
-**iPhone Mirroring for your Mac, even in the EU, and for your AI agents.** See your iPhone on your Mac at a smooth 60 FPS and use it with your mouse and trackpad. Or let Claude and other AI agents use it for you: they see the screen, tap, swipe and type through an MCP server, a CLI or a local HTTP API. Free and open source.
+**iPhone Mirroring for your Mac, even in the EU, and for your AI agents.** See your iPhone on your Mac at a smooth 60 FPS and use it with your mouse and trackpad. Or let Claude and other AI agents use it for you: they see the screen, tap, swipe and type through an MCP server, a CLI or a local HTTP API, with no computer use needed. Free and open source.
+
+**[Website](https://bhuwanadhikari.com.np/mirror-my-iphone/)** · [Install](#install) · [For AI agents](#let-claude-and-other-ai-agents-use-your-iphone) · [FAQ](#faq)
 
 <img src="assets/screenshots/mirror-my-iphone-on-mac.png" width="600" alt="Mirror my iPhone on a Mac, showing an iPhone 15 home screen at 59 FPS over USB, with the Doctor sidebar reporting that mirroring and touch control are ready">
 
@@ -28,7 +30,7 @@ brew trust bhuwanadhikari/mirror-my-iphone
 brew install --cask mirror-my-iphone
 ```
 
-## Let Claude use your iPhone
+## Let Claude and other AI agents use your iPhone
 
 Give Claude Code your iPhone with one command (the app must be open, with touch control ready):
 
@@ -36,7 +38,9 @@ Give Claude Code your iPhone with one command (the app must be open, with touch 
 claude mcp add --scope user mirror-my-iphone -- "/Applications/Mirror my iPhone.app/Contents/Resources/bin/mirror-my-iphone" mcp
 ```
 
-Then ask something like *"Open Settings on my iPhone and turn on Dark Mode"*. Claude takes screenshots, reads what's on screen, and taps, swipes and types its way there, and you watch every touch on the mirrored screen as a blue dot. Claude Desktop, Cursor and other MCP clients use the same command. Agents without MCP can use the CLI (`mirror-my-iphone tap 196 400`) or the [HTTP API](#agent-api).
+Then ask something like *"Open Settings on my iPhone and turn on Dark Mode"*. Claude takes screenshots, reads what's on screen, and taps, swipes and types its way there, and you watch every touch on the mirrored screen as a blue dot. Claude Desktop, Cursor, VS Code, Codex CLI, Gemini CLI and other MCP clients run the same command ([setup for each](https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mcp-server/)). Agents without MCP can use the CLI (`mirror-my-iphone tap 196 400`) or the [HTTP API](#agent-api).
+
+**No computer use needed.** Agents don't screenshot your Mac, look for the mirror window or move your mouse. They call tools that act on the iPhone itself: `describe_ui` gives them the exact point to tap for every button and field, each gesture comes back with a screenshot of the result, and you can keep using your Mac while they work. Apple's iPhone Mirroring has no API, so with it an agent could only use computer use.
 
 ## "iPhone Mirroring is not available in your country or region"?
 
@@ -49,21 +53,26 @@ That's what Apple's iPhone Mirroring shows across the EU, where Apple has switch
 - **Smooth 60 FPS:** scrolling, animations and videos look natural
 - **Full control:** click to tap, drag to swipe, scroll with the trackpad, click and hold for a long press
 - **Buttons and sound:** Home, Lock and volume from the toolbar or keyboard; iPhone audio plays on your Mac
-- **Built for AI agents:** Claude and other agents can see the screen, tap, swipe, type and open apps
+- **Built for AI agents:** Claude and other agents can see the screen, tap, swipe, type and open apps directly through an MCP server, CLI or HTTP API, without computer use
 - **Guided setup:** the Doctor checks your iPhone and Mac and shows how to fix anything missing, often with one click
 - **Private and free:** everything stays on your Mac and the USB cable; no account, no telemetry, MIT licensed
 
 | | Mirror my iPhone | Apple iPhone Mirroring |
 |---|---|---|
 | Works in the EU | ✅ | ❌ |
+| Mac | macOS 13 Ventura or later | macOS 15 Sequoia or later |
 | Control with mouse and trackpad | ✅ | ✅ |
+| Type with the Mac keyboard | Not yet | ✅ |
+| API for AI agents | ✅ MCP, CLI, HTTP | ❌ |
 | Connection | USB | Wireless |
 | Price | Free, open source | Built in |
+
+More: [all iPhone Mirroring alternatives compared](https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mirroring-alternatives/).
 
 ## FAQ
 
 **Is there an iPhone Mirroring alternative that works in the EU?**
-Yes: Mirror my iPhone mirrors and controls your iPhone from a Mac in any country.
+Yes: Mirror my iPhone mirrors and controls your iPhone from a Mac in any country. It also runs on macOS 13 Ventura and 14 Sonoma, which Apple's iPhone Mirroring doesn't support.
 
 **Do I need a paid Apple Developer account or a jailbreak?**
 No. Touch control works with a free Apple ID in Xcode and Developer Mode on the iPhone. Mirroring alone needs neither.
@@ -76,6 +85,9 @@ Macs with macOS 13 Ventura or later (Apple silicon and Intel). Tested with an iP
 
 **Can Claude or another AI agent control my iPhone?**
 Yes. Mirror my iPhone includes an MCP server for Claude Code, Claude Desktop, Cursor and other MCP clients, plus a CLI and a local HTTP API. Agents get screenshots, a list of the elements on screen, and taps, swipes, typing, buttons and app launching. It's your phone, so the agent is told to ask before anything hard to undo, like sending messages or buying.
+
+**Does the agent need computer use?**
+No. The tools act on the iPhone directly, so the agent never takes over your Mac's mouse or keyboard.
 
 **Can I type with my Mac keyboard?**
 Not yet, and double tap isn't supported either: a double click arrives as two separate taps.

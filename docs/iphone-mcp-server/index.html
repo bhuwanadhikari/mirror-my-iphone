@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iPhone MCP Server: Let Claude and AI Agents Control Your iPhone</title>
+<meta name="description" content="Give Claude, Cursor, Codex and other AI agents a real iPhone: screenshots, UI elements, taps, swipes and typing over MCP, CLI or HTTP. No computer use needed.">
+<link rel="canonical" href="https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mcp-server/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Bhuwan Adhikari">
+<meta name="theme-color" content="#2f63ee">
+<link rel="icon" href="../assets/favicon.ico" sizes="any">
+<link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Mirror my iPhone">
+<meta property="og:title" content="iPhone MCP Server: let AI agents control a real iPhone">
+<meta property="og:description" content="Screenshots, UI elements, taps, swipes and typing for Claude, Cursor, Codex and your own scripts. No computer use needed.">
+<meta property="og:url" content="https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mcp-server/">
+<meta property="og:image" content="https://bhuwanadhikari.com.np/mirror-my-iphone/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Let AI agents control your iPhone: MCP server, CLI and HTTP API",
+      "description": "How to give Claude Code, Claude Desktop, Cursor, VS Code, Codex CLI, Gemini CLI and your own scripts direct control of a real iPhone with Mirror my iPhone, without computer use.",
+      "url": "https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mcp-server/",
+      "datePublished": "2026-10-09",
+      "dateModified": "2026-10-09",
+      "inLanguage": "en",
+      "proficiencyLevel": "Beginner",
+      "author": {"@type": "Person", "name": "Bhuwan Adhikari", "url": "https://bhuwanadhikari.com.np/"},
+      "about": {"@id": "https://bhuwanadhikari.com.np/mirror-my-iphone/#app"},
+      "isPartOf": {"@id": "https://bhuwanadhikari.com.np/mirror-my-iphone/#website"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Mirror my iPhone", "item": "https://bhuwanadhikari.com.np/mirror-my-iphone/"},
+        {"@type": "ListItem", "position": 2, "name": "iPhone MCP server and API for AI agents"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "Is there an MCP server for controlling a real iPhone?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Mirror my iPhone, a free and open-source Mac app, includes an MCP server that lets AI agents take screenshots of a USB-connected iPhone, list the elements on screen, and tap, swipe, type, press buttons and open apps."}},
+        {"@type": "Question", "name": "Which AI agents can control my iPhone with Mirror my iPhone?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Any MCP client that runs local servers, including Claude Code, Claude Desktop, Cursor, VS Code, Codex CLI and Gemini CLI. Agents and scripts without MCP can use the mirror-my-iphone command-line tool or the local HTTP API."}},
+        {"@type": "Question", "name": "Does the agent need computer use?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. The agent calls tools that act on the iPhone directly. It doesn't screenshot your Mac, look for a window or move your mouse, so you can keep using your Mac while it works."}},
+        {"@type": "Question", "name": "Can an agent control an iPhone app I'm developing?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Yes. Build and install your app with Xcode as usual, then let the agent open it by bundle ID, tap through it and check the screenshots and on-screen elements on a real device."}},
+        {"@type": "Question", "name": "Is it safe to let an agent use my iPhone?",
+         "acceptedAnswer": {"@type": "Answer", "text": "The API listens only on 127.0.0.1, needs a token that only your user account can read, and refuses requests from web pages. The MCP server tells the agent to ask before anything hard to undo, such as sending messages, buying or deleting data, and you see every agent touch as a blue dot on the mirrored screen."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/favicon-32.png" srcset="../assets/apple-touch-icon.png 2x" width="32" height="32" alt="">Mirror my iPhone</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../#features">Features</a>
+      <a href="../iphone-mirroring-not-available-in-your-country-or-region/">EU</a>
+      <a href="../iphone-mirroring-alternatives/">Alternatives</a>
+      <a href="../#faq">FAQ</a>
+      <a class="gh" href="https://github.com/bhuwanadhikari/mirror-my-iphone">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="article">
+  <div class="wrap narrow">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Mirror my iPhone</a> › AI agents</nav>
+    <h1>Let AI agents control your iPhone: MCP server, CLI and HTTP API</h1>
+    <p class="updated">Updated October 9, 2026</p>
+
+    <p class="lead"><a href="../">Mirror my iPhone</a> gives AI agents a real iPhone. Claude, Cursor, Codex or your own script can see the screen, read its buttons and fields, and tap, swipe, type and open apps on an iPhone connected to your Mac by USB. They call tools that act on the phone directly, with no computer use involved.</p>
+
+    <h2>Why a direct API instead of computer use</h2>
+    <p>The usual way to let an AI use a phone from a Mac is computer use: the agent screenshots your whole desktop, finds the mirroring window, and moves your mouse to click inside it. Apple's iPhone Mirroring offers nothing else, because it has no API. Mirror my iPhone skips all of that:</p>
+    <ul>
+      <li><strong>Exact targets.</strong> <code>describe_ui</code> lists the buttons, text fields and cells on screen from iOS accessibility, each with the point to tap. The agent doesn't have to guess positions from pixels.</li>
+      <li><strong>Results, not animations.</strong> Each gesture returns once the iPhone has performed it, followed by a screenshot taken after the screen settles.</li>
+      <li><strong>Small screenshots.</strong> One pixel per iPhone point (393 × 852 on an iPhone 15) instead of your whole desktop.</li>
+      <li><strong>Your Mac stays yours.</strong> The agent never touches your mouse or keyboard. The app has to be open, but its window can stay in the background while you work.</li>
+      <li><strong>One API, three ways in.</strong> An MCP server for agents, a CLI for shell scripts, and HTTP for everything else.</li>
+    </ul>
+
+    <h2>Quick start</h2>
+    <ol>
+      <li><a href="../#install">Install Mirror my iPhone</a>, open it and let the Doctor set up touch control (Xcode, a free Apple ID and Developer Mode on the iPhone).</li>
+      <li>Add the MCP server to your agent, using one of the configurations below.</li>
+      <li>Ask something like <em>"Open Settings on my iPhone and turn on Dark Mode."</em> You see every agent touch as a blue dot on the mirrored screen.</li>
+    </ol>
+
+    <h3>Claude Code</h3>
+    <div class="code"><pre><code><span class="p">$ </span>claude mcp add --scope user mirror-my-iphone -- "/Applications/Mirror my iPhone.app/Contents/Resources/bin/mirror-my-iphone" mcp</code></pre></div>
+
+    <h3>Claude Desktop, Cursor and Gemini CLI</h3>
+    <p>Add this to <code>~/Library/Application Support/Claude/claude_desktop_config.json</code> (Claude Desktop), <code>~/.cursor/mcp.json</code> (Cursor) or <code>~/.gemini/settings.json</code> (Gemini CLI):</p>
+    <div class="code"><pre><code>{
+  "mcpServers": {
+    "mirror-my-iphone": {
+      "command": "/Applications/Mirror my iPhone.app/Contents/Resources/bin/mirror-my-iphone",
+      "args": ["mcp"]
+    }
+  }
+}</code></pre></div>
+
+    <h3>VS Code</h3>
+    <p>In <code>.vscode/mcp.json</code>:</p>
+    <div class="code"><pre><code>{
+  "servers": {
+    "mirror-my-iphone": {
+      "type": "stdio",
+      "command": "/Applications/Mirror my iPhone.app/Contents/Resources/bin/mirror-my-iphone",
+      "args": ["mcp"]
+    }
+  }
+}</code></pre></div>
+
+    <h3>Codex CLI</h3>
+    <p>In <code>~/.codex/config.toml</code>:</p>
+    <div class="code"><pre><code>[mcp_servers.mirror-my-iphone]
+command = "/Applications/Mirror my iPhone.app/Contents/Resources/bin/mirror-my-iphone"
+args = ["mcp"]</code></pre></div>
+    <p>Any other MCP client that runs local (stdio) servers works the same way.</p>
+
+    <h2>Tools</h2>
+    <p>Coordinates are iPhone points, which are also the pixels of a default screenshot, with (0, 0) at the top left.</p>
+    <div class="table-wrap">
+      <table class="wide">
+        <thead><tr><th scope="col">MCP tool</th><th scope="col">CLI</th><th scope="col">HTTP</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><td><code>screenshot</code></td><td><code>screenshot [FILE]</code></td><td><code>GET /v1/screenshot</code></td><td>The screen as PNG or JPEG, after it settles</td></tr>
+          <tr><td><code>describe_ui</code></td><td><code>ui [--json]</code></td><td><code>GET /v1/ui</code></td><td>Elements on screen: type, label, value and the point to tap</td></tr>
+          <tr><td><code>tap</code>, <code>double_tap</code></td><td><code>tap X Y</code>, <code>double-tap X Y</code></td><td><code>POST /v1/tap</code>, <code>/v1/double_tap</code></td><td>Tap at a point</td></tr>
+          <tr><td><code>long_press</code></td><td><code>long-press X Y</code></td><td><code>POST /v1/long_press</code></td><td>Touch and hold</td></tr>
+          <tr><td><code>swipe</code></td><td><code>swipe X1 Y1 X2 Y2</code></td><td><code>POST /v1/swipe</code></td><td>Drag a finger; scroll, go home, open Control Center</td></tr>
+          <tr><td><code>type_text</code></td><td><code>type TEXT</code></td><td><code>POST /v1/type</code></td><td>Type into the focused field; <code>\n</code> presses Return</td></tr>
+          <tr><td><code>press_button</code></td><td><code>button NAME</code></td><td><code>POST /v1/button</code></td><td>Home, Lock, volume up or down</td></tr>
+          <tr><td><code>open_app</code>, <code>list_apps</code></td><td><code>open-app ID</code>, <code>apps</code></td><td><code>POST /v1/open_app</code>, <code>GET /v1/apps</code></td><td>Open an app by bundle ID; list installed apps</td></tr>
+          <tr><td><code>device_info</code></td><td><code>info</code></td><td><code>GET /v1/info</code></td><td>Model, iOS version, screen size, touch and capture status</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Gesture tools answer with a screenshot of the result, so the agent sees each step without asking.</p>
+
+    <h3>What the agent sees</h3>
+    <p class="code-label">Example output of <code>describe_ui</code> (or <code>mirror-my-iphone ui</code>) in Settings:</p>
+    <div class="code"><pre><code>In front: Settings (com.apple.Preferences). Screen 393 × 852 points. Keyboard hidden.
+SearchField "Search" at (196.5, 160)
+Cell "Wi-Fi" value "Home" at (196.5, 398)
+Cell "Bluetooth" value "On" at (196.5, 442)
+Cell "Display &amp; Brightness" at (196.5, 640)
+...</code></pre></div>
+
+    <h2>HTTP API for scripts and other agents</h2>
+    <p>While it runs, the app serves the API on <code>127.0.0.1:8101</code> (or a free port). It writes the URL and a token to <code>~/Library/Application Support/Mirror my iPhone/api.json</code>, which only your user account can read. Every request needs the token.</p>
+    <div class="code"><pre><code><span class="p">$ </span>API="$HOME/Library/Application Support/Mirror my iPhone/api.json"
+<span class="p">$ </span>URL=$(plutil -extract url raw -o - "$API") TOKEN=$(plutil -extract token raw -o - "$API")
+<span class="p">$ </span>curl -H "Authorization: Bearer $TOKEN" "$URL/v1/screenshot" -o screen.png
+<span class="p">$ </span>curl -H "Authorization: Bearer $TOKEN" -d '{"x": 196, "y": 400}' "$URL/v1/tap"</code></pre></div>
+    <p>The same from Python, with only the standard library:</p>
+    <div class="code"><pre><code>import json, pathlib, urllib.request
+
+api = json.loads((pathlib.Path.home() / "Library/Application Support/Mirror my iPhone/api.json").read_text())
+
+def call(path, body=None):
+    data = json.dumps(body).encode() if body is not None else None
+    request = urllib.request.Request(api["url"] + path, data=data,
+                                     headers={"Authorization": f"Bearer {api['token']}"})
+    return urllib.request.urlopen(request).read()
+
+call("/v1/open_app", {"bundle_id": "com.apple.Preferences"})
+print(json.loads(call("/v1/ui"))["elements"][:5])
+pathlib.Path("screen.png").write_bytes(call("/v1/screenshot"))</code></pre></div>
+    <p><code>GET /v1</code> lists every endpoint. The <a href="https://github.com/bhuwanadhikari/mirror-my-iphone#agent-api">README</a> has the full parameter reference.</p>
+
+    <h2>What people use it for</h2>
+    <ul>
+      <li><strong>Testing iOS apps on a real device.</strong> Build with Xcode, then let Claude Code open your app, tap through a flow and check the screenshots and on-screen elements.</li>
+      <li><strong>Reproducing bugs</strong> step by step, with a screenshot after every action.</li>
+      <li><strong>Accessibility checks.</strong> <code>describe_ui</code> shows which buttons and fields have labels and which don't.</li>
+      <li><strong>Phone chores</strong> you'd rather describe than click through, with you watching every touch.</li>
+    </ul>
+
+    <h2>Safety and privacy</h2>
+    <ul>
+      <li>The API listens only on <code>127.0.0.1</code> and refuses requests from web pages, so websites can't reach your phone through your browser.</li>
+      <li>Every request needs the token from a file only your user account can read.</li>
+      <li>The MCP server tells the agent this is your own phone and to ask before anything hard to undo, like sending messages, buying, deleting data or changing security settings.</li>
+      <li>You see each agent touch as a blue dot on the mirrored screen, and nothing leaves your Mac except what your agent sends to its model.</li>
+    </ul>
+
+    <h2>Limitations</h2>
+    <ul>
+      <li>The iPhone's screen has to be on. Screenshots go stale while it sleeps, and the agent is told so. Raise Auto-Lock in Settings › Display &amp; Brightness to keep it awake.</li>
+      <li>Touch control needs Xcode and Developer Mode on the iPhone. With a free Apple ID, WebDriverAgent's signing profile lasts 7 days, and the app signs it again automatically.</li>
+      <li>Agent gestures and your mouse share one queue, so they run one after another.</li>
+    </ul>
+
+    <h2>FAQ</h2>
+    <div class="faq">
+      <h3>Is there an MCP server for controlling a real iPhone?</h3>
+      <p>Yes. Mirror my iPhone, a free and open-source Mac app, includes an MCP server that lets AI agents take screenshots of a USB-connected iPhone, list the elements on screen, and tap, swipe, type, press buttons and open apps.</p>
+      <h3>Which AI agents can control my iPhone with Mirror my iPhone?</h3>
+      <p>Any MCP client that runs local servers, including Claude Code, Claude Desktop, Cursor, VS Code, Codex CLI and Gemini CLI. Agents and scripts without MCP can use the <code>mirror-my-iphone</code> command-line tool or the local HTTP API.</p>
+      <h3>Does the agent need computer use?</h3>
+      <p>No. The agent calls tools that act on the iPhone directly. It doesn't screenshot your Mac, look for a window or move your mouse, so you can keep using your Mac while it works.</p>
+      <h3>Can an agent control an iPhone app I'm developing?</h3>
+      <p>Yes. Build and install your app with Xcode as usual, then let the agent open it by bundle ID, tap through it and check the screenshots and on-screen elements on a real device.</p>
+      <h3>Is it safe to let an agent use my iPhone?</h3>
+      <p>The API listens only on 127.0.0.1, needs a token that only your user account can read, and refuses requests from web pages. The MCP server tells the agent to ask before anything hard to undo, such as sending messages, buying or deleting data, and you see every agent touch as a blue dot on the mirrored screen.</p>
+    </div>
+
+    <div class="cta">
+      <h2>Give your agent an iPhone</h2>
+      <p>Free and open source. Works with Claude, Cursor, Codex, Gemini CLI and any MCP client.</p>
+      <div class="buttons">
+        <a class="btn" href="../#install">Install Mirror my iPhone</a>
+        <a class="btn ghost" href="https://github.com/bhuwanadhikari/mirror-my-iphone">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><strong>Mirror my iPhone</strong><br>Free, open-source iPhone mirroring for Mac.</div>
+      <nav aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../iphone-mirroring-not-available-in-your-country-or-region/">EU</a>
+        <a href="../iphone-mirroring-alternatives/">Alternatives</a>
+        <a href="https://github.com/bhuwanadhikari/mirror-my-iphone">GitHub</a>
+      </nav>
+    </div>
+    <p class="legal">Mirror my iPhone is an independent project, not affiliated with or endorsed by Apple Inc. Apple, iPhone, Mac, macOS, QuickTime and Xcode are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

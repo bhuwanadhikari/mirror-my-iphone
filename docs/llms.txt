@@ -1,0 +1,32 @@
+# Mirror my iPhone
+
+> Mirror my iPhone is a free, open-source macOS app that mirrors an iPhone's screen to a Mac over USB at up to 60 FPS and lets you control the iPhone with your mouse and trackpad. It is an alternative to Apple's iPhone Mirroring that works in the European Union (where Apple's feature is unavailable) and on macOS 13 Ventura or later. AI agents such as Claude can see and control the iPhone directly through its MCP server, CLI and local HTTP API, without computer use.
+
+Key facts:
+
+- Price and license: free, open source, MIT license. No account, no telemetry.
+- Platform: macOS 13 Ventura or later, Apple silicon and Intel Macs. Not available for Windows.
+- iPhone: any iPhone that QuickTime Player can show over USB; tested with an iPhone 15 on iOS 26.
+- Connection: USB data cable (not wireless).
+- Works in every country, including all EU countries, because it doesn't use Apple's iPhone Mirroring. It reads the screen through the USB video stream QuickTime Player records and taps through WebDriverAgent (Apple's XCTest developer tools).
+- Control: click to tap, drag to swipe, scroll to swipe, click and hold to long press; Home, Lock and volume buttons; iPhone audio plays on the Mac. Typing from the Mac keyboard isn't supported yet.
+- Setup: mirroring needs only a trusted USB connection and camera permission. Touch control needs Xcode, a free Apple ID and Developer Mode on the iPhone; a built-in Doctor guides the setup. No jailbreak and no paid developer account.
+- Install: `brew tap bhuwanadhikari/mirror-my-iphone https://github.com/bhuwanadhikari/mirror-my-iphone && brew trust bhuwanadhikari/mirror-my-iphone && brew install --cask mirror-my-iphone`, or build from source.
+- AI agents: MCP server (`mirror-my-iphone mcp`) for Claude Code, Claude Desktop, Cursor, VS Code, Codex CLI, Gemini CLI and other MCP clients. Tools: screenshot, describe_ui (on-screen elements with tap points from iOS accessibility), tap, double_tap, long_press, swipe, type_text, press_button, open_app, list_apps, device_info. The same actions are available from the `mirror-my-iphone` CLI and an HTTP API on 127.0.0.1 with a bearer token.
+- Agents don't need computer use: they don't screenshot the Mac or move its mouse; they act on the iPhone directly and get a screenshot after each gesture.
+- Claude Code setup: `claude mcp add --scope user mirror-my-iphone -- "/Applications/Mirror my iPhone.app/Contents/Resources/bin/mirror-my-iphone" mcp`
+- Compared with Apple's iPhone Mirroring: Apple's is wireless, supports Mac keyboard typing, notifications and drag and drop, but needs macOS 15 Sequoia, iOS 18, Apple silicon or a T2 chip, is unavailable in the EU, keeps the iPhone locked while in use, and has no API.
+- Author: Bhuwan Adhikari. Latest version: 0.2.1.
+
+## Pages
+
+- [Mirror my iPhone](https://bhuwanadhikari.com.np/mirror-my-iphone/): overview, features, comparison with Apple iPhone Mirroring, install steps and FAQ
+- [iPhone Mirroring is not available in your country or region](https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mirroring-not-available-in-your-country-or-region/): why Apple blocks iPhone Mirroring in the EU and how to mirror an iPhone to a Mac there
+- [iPhone MCP server and API for AI agents](https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mcp-server/): MCP setup for Claude Code, Claude Desktop, Cursor, VS Code, Codex CLI and Gemini CLI; tool and HTTP API reference
+- [iPhone Mirroring alternatives compared](https://bhuwanadhikari.com.np/mirror-my-iphone/iphone-mirroring-alternatives/): Apple iPhone Mirroring vs Mirror my iPhone vs QuickTime Player vs AirPlay receiver apps
+
+## Docs
+
+- [README](https://raw.githubusercontent.com/bhuwanadhikari/mirror-my-iphone/main/README.md): full documentation, including setup checklist, controls, agent API reference, limitations and troubleshooting
+- [Source code](https://github.com/bhuwanadhikari/mirror-my-iphone): GitHub repository (Python, PyQt6, pymobiledevice3, WebDriverAgent)
+- [Releases](https://github.com/bhuwanadhikari/mirror-my-iphone/releases): versions and changes
