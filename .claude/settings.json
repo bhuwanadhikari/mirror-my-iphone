@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "ClaudeInChromeDomain(search.google.com)",
+      "ClaudeInChromeDomain(glama.ai)",
+      "ClaudeInChromeDomain(mcp.so)",
+      "ClaudeInChromeDomain(news.ycombinator.com)"
+    ]
+  }
+}
